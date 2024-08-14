@@ -11,6 +11,11 @@ let xCoord = 3;
 let yCoord = 3;
 let gameOn = false;
 
+const inventory = document.querySelector(".inventory");
+const playerInventory1 = "-";
+const playerInventory2 = "-";
+const playerInventory3 = "-";
+
 const newGameButton = document.querySelector("#new-game");
 const game = document.querySelector(".game");
 const room = document.querySelector(".room");
@@ -23,6 +28,10 @@ document.querySelector("#north").addEventListener("click", (e) => {
 	coords[0].textContent = "x: " + xCoord;
 	coords[1].textContent = "y: " + yCoord;
 	room.textContent = getRoomText();
+
+	inventory.children[0].textContent = playerInventory1;
+	inventory.children[1].textContent = playerInventory2;
+	inventory.children[2].textContent = playerInventory3;
 });
 document.querySelector("#south").addEventListener("click", (e) => {
 	yCoord++;
@@ -30,6 +39,10 @@ document.querySelector("#south").addEventListener("click", (e) => {
 	coords[0].textContent = "x: " + xCoord;
 	coords[1].textContent = "y: " + yCoord;
 	room.textContent = getRoomText();
+
+	inventory.children[0].textContent = playerInventory1;
+	inventory.children[1].textContent = playerInventory2;
+	inventory.children[2].textContent = playerInventory3;
 });
 document.querySelector("#west").addEventListener("click", (e) => {
 	xCoord--;
@@ -37,6 +50,10 @@ document.querySelector("#west").addEventListener("click", (e) => {
 	coords[0].textContent = "x: " + xCoord;
 	coords[1].textContent = "y: " + yCoord;
 	room.textContent = getRoomText();
+
+	inventory.children[0].textContent = playerInventory1;
+	inventory.children[1].textContent = playerInventory2;
+	inventory.children[2].textContent = playerInventory3;
 });
 document.querySelector("#east").addEventListener("click", (e) => {
 	xCoord++;
@@ -44,6 +61,10 @@ document.querySelector("#east").addEventListener("click", (e) => {
 	coords[0].textContent = "x: " + xCoord;
 	coords[1].textContent = "y: " + yCoord;
 	room.textContent = getRoomText();
+
+	inventory.children[0].textContent = playerInventory1;
+	inventory.children[1].textContent = playerInventory2;
+	inventory.children[2].textContent = playerInventory3;
 });
 
 const savePlayerName = document.querySelector(".player-name button");
@@ -104,5 +125,5 @@ const getRoomText = () => {
 	if (pos === "45") return "45";
 	if (pos === "55") return "55";
 
-	return "You stand in a dark forest?";
+	return "You seem to be lost. Please restart the game.";
 };
