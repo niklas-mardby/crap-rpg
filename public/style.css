@@ -1,0 +1,67 @@
+/*
+https://coolors.co/292f36-4ecdc4-deb887-ff99b3-9ed8db
+https://coolors.co/292f36-70d7d0-deb887-ff99b3-9ed8db
+
+gunmetal #292f36            text
+tiffany-blue #70D7D0
+tan #deb887                 bakgrundsfärg
+baker-miller-pink #ff99b3
+non-photo-blue #9ed8db
+*/
+
+* {
+	margin: 0px;
+}
+body {
+	background-color: #deb887;
+	color: #292f36;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25rem;
+
+	h1 {
+		margin: 0.75rem;
+	}
+}
+
+nav {
+	padding: 0.75rem;
+	background-color: #9ed8db;
+}
+
+button {
+	font-size: 1.25rem;
+	font-weight: bold;
+	background-color: #ff99b3;
+	color: #292f36;
+	padding: 0.5rem;
+}
+
+input[type="text"] {
+	font-size: 1.25rem;
+	padding: 0.3rem;
+}
+
+main {
+	margin-top: 0.75rem;
+	padding: 0.5rem;
+	/*border: 2px solid #292f36;*/
+}
+
+.intro {
+	padding: 0.75rem;
+}
+
+.game {
+	h2,
+	p {
+		margin: 0.75rem;
+	}
+}
+
+.player-name {
+	p,
+	input,
+	button {
+		margin: 0.75rem;
+	}
+}

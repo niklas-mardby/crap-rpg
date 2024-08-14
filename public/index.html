@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>crap-rpg</title>
+		<script src="app.js" defer></script>
+	</head>
+	<body>
+		<h1>crap-rpg (v.1.0)</h1>
+		<nav><button id="new-game">New Game</button></nav>
+		<main>
+			<p class="intro">
+				Welcome bold adventurer! Click New Game to begin...
+			</p>
+			<div class="player-name" style="display: none">
+				<p>Name:</p>
+				<input type="text" name="player-name" /><br />
+				<button>Save name</button>
+			</div>
+			<div class="game" style="display: none">
+				<h2>Adventures of</h2>
+				<ul>
+					<li>x:</li>
+					<li>y:</li>
+				</ul>
+				<p class="room"></p>
+				<div>
+					<button>North</button>
+					<button>South</button>
+					<button>East</button>
+					<button>West</button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
