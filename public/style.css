@@ -65,3 +65,26 @@ main {
 		margin: 0.75rem;
 	}
 }
+
+.map {
+	border: 1px solid black;
+
+	.empty {
+		background-color: #deb887;
+	}
+	.chosen {
+		background-color: #ff99b3;
+	}
+
+	& > div {
+		border: none;
+		display: flex;
+
+		& > div {
+			border: 2px solid #70d7d0;
+			width: 20px;
+			height: 20px;
+			margin: 2px;
+		}
+	}
+}

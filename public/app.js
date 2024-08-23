@@ -22,6 +22,7 @@ const game = document.querySelector(".game");
 const room = document.querySelector(".room");
 const gameChildren = game.children;
 const coords = gameChildren[1].children;
+const map = document.querySelector(".map");
 
 document.querySelector("#north").addEventListener("click", (e) => {
 	yCoord--;
@@ -133,6 +134,8 @@ savePlayerName.addEventListener("click", (e) => {
 const getRoomText = () => {
 	const pos = "" + xCoord + yCoord;
 
+	drawMap();
+
 	if (pos === "11")
 		return "You stand in the dark forest of the north. The cold is biting and little light trickle down to the forest floor. You can't go further north nor west.";
 	if (pos === "21") {
@@ -232,4 +235,20 @@ const getRoomText = () => {
 	if (pos === "55") return "55";
 
 	return "You seem to be lost. Please restart the game.";
+};
+
+const drawMap = () => {
+	let str = ``;
+
+	for (let i = 1; i <= 5; i++) {
+		str += `<div>`;
+
+		for (let j = 1; j <= 5; j++) {
+			if (xCoord === j && yCoord === i) str += `<div class="chosen"></div>`;
+			else str += `<div></div>`;
+		}
+
+		str += `</div>`;
+	}
+	map.innerHTML = str;
 };
